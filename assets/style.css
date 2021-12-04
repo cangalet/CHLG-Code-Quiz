@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'lato', sans-serif;
+}
+
+body{
+    background: #1c2e4a;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #fff;
+    padding: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+header .highScore {
+    font-size: 18px;
+    font-weight: 500;
+    height: 45px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+}
+
+header .timer {
+    color: #004085;
+    background: #cce5ff;
+    border: 1px solid #b8daff;
+    height: 45px;
+    padding: 0 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+}
+
+header .timer .timerSec {
+    font-size: 18px;
+    font-weight: 500;
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    background: #1c2e4a;
+    border: 1px solid #1c2e4a;
+    user-select: none;
+}
+
+
+/* Start Button */
+.startBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.startBtn button {
+    font-size: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 15px;
+    border-color: #f1c40f;
+    border-radius: 0.6em;
+    background-color: transparent;
+    color: #fff;
+    background-image: -webkit-linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+}
+
+.startBtn button:hover {
+    background-position: 0;
+}
+
