@@ -10,7 +10,8 @@ body{
 }
 
 /* Actions */
-.quizBox.activeQuiz {
+.quizBox.activeQuiz,
+.highScoreFormContainer.activeForm {
     opacity: 1;
     z-index: 5;
     pointer-events: auto;
@@ -34,6 +35,10 @@ header .highScore {
     padding: 0 8px;
     display: flex;
     align-items: center;
+}
+
+header .highScore a {
+    text-decoration: none;
 }
 
 header .timer {
@@ -66,7 +71,9 @@ header .timer .timerSec {
 
 /* Start Button */
 .startBtn,
-.quizBox {
+.quizBox,
+.highScoreBox,
+.highScoreFormContainer {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -98,7 +105,8 @@ header .timer .timerSec {
 }
 
 /* Quix Box */
-.quizBox {
+.quizBox,
+.highScoreFormContainer {
     width: 75vw;
     background: #fff;
     border-radius: 5px;
@@ -108,20 +116,23 @@ header .timer .timerSec {
     transition: all 0.3s ease;
 }
 
-.quizBox header {
+.quizBox header,
+.highScoreBox header,
+.highScoreFormContainer header {
     position: relative;
-    height: 100px;
     border-radius: 5px 5px 0 0;
     box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.1);
 }
 
-.quizBox header .questionText {
+.containerHeader {
     font-size: 25px;
     font-weight: 600;
     margin: auto; 
 }
 
-.questionOptions{
+.questionOptions,
+.highScores,
+.highScoreForm {
     padding: 20px;
     display: block;
 }
@@ -146,3 +157,63 @@ header .timer .timerSec {
     background: #cce5ff;
     border: 1px solid #b8daff;
 }
+
+footer{
+    height: 60px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid lightgrey;
+}
+
+/* High Score Container */
+
+/* highScore Box */
+.highScoreBox {
+    width: 75vw;
+    background: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.highScores span{
+    background: aliceblue;
+    width: 100%;
+    border: 1px solid #84c5fe;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 17px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* highScore Form */
+
+.highScoreForm {
+    background: #fff;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #004085;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
