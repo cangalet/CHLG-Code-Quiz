@@ -9,7 +9,7 @@ var questionResponseEl = document.querySelector(".questionResponse");
 
 // Global Variables
 var questionCount = 0;
-var timeLeft = 40;
+var timeLeft = 60;
 var userScore = 0;
 var userInfo = {
     name: "",
